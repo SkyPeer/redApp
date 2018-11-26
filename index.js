@@ -16,8 +16,8 @@ app.get('/api/users/select', function(req, res, next){
     res.header('Access-Control-Allow-Origin', '*');
 
 });
-app.use('public', express.static(path.join(__dirname, './public')));
-app.use('build', express.static(path.join(__dirname, './build')));
+app.use('public', express.static(path.join(__dirname, 'public')));
+app.use('build', express.static(path.join(__dirname, 'build')));
 app.use('/', (req, res, next) => {
     // console.log('send default')
     res.sendFile('index.html', {root: __dirname})
